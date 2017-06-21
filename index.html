@@ -3,6 +3,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Kanit:400,400i,700,700i" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link
+    rel="stylesheet"
+    href="prism-atom-dark.css"
+    type="text/css"
+    media="screen"
+  />
+
+  <script type="text/javascript" src="prism.js"></script>
 	
 	</head>
 
@@ -23,31 +32,130 @@
 		<hr class="red">
 
 		<div class="box">
-			Left Side
+			<h4>Temperature Conversion</h4>
+			<p>
+				This Ruby program will prompt the user for a temperature in degree Celsius and let the user knnow what the corresponding temperature is in Fahrenheit.
+			</p>
 		</div>
 
 		<div class="box">
-			Right Side
+			<pre><code class="language-ruby">def celsius_to_fahrenheit(celsius)
+  return celsius * 9/5 + 32
+end
+
+puts &quot;Please enter degrees in Celsius: &quot;
+fahrenheit = celsius_to_fahrenheit(gets.to_f)
+puts &quot;The temperature is #{fahrenheit} degrees Fahrenheit&quot;</pre></code>
 		</div>
 
 		<br class="clear" />
 
 		<div class="box">
-			Left Side
+			<pre><code class="language-ruby">print &quot;How many items do you want to see? &quot;
+
+number_of_iterations = gets.chomp.to_i
+
+number_of_iterations.times do |item|
+  remove_zero_index = item + 1
+  if (remove_zero_index % 3 == 0) &amp;&amp; (remove_zero_index % 5 == 0)
+    puts &quot;Foobar&quot;
+  elsif remove_zero_index % 5 == 0
+    puts &quot;Bar&quot;
+  elsif remove_zero_index % 3 == 0
+    puts &quot;Foo&quot;
+  else
+    puts &quot;#{remove_zero_index}&quot;
+  end
+end</pre></code>
 		</div>
 
 		<div class="box">
-			Right Side
+			<h4>Foobar</h4>
+			<p>
+				This Ruby program is an adaptation of a classic technical interview problem which displays sequences of the Foobar pattern.
+			</p>
 		</div>
 
 		<br class="clear" />
 
 		<div class="box">
-			Left Side
+			<h4>Pig Dice Game</h4>
+			<p>
+				This Java program is a player versus computer version of a simple dice game commonly used by mathematics teachers to teach probability concepts.
+			</p>
 		</div>
 
 		<div class="box">
-			Right Side
+			<pre><code class="language-java">import java.util.Scanner;
+
+public class PigDice {
+	public static void main(String[] args) {
+		Scanner keyboard = new Scanner(System.in);		
+		int roll, ptot, ctot, turnTotal;
+		String choice = &quot;&quot;;
+		ptot = 0;
+		ctot = 0;
+
+		do {
+			turnTotal = 0;
+			System.out.println(&quot;You have &quot;+ptot+&quot; points&quot;);
+
+			do {
+				roll = 1 + (int)(Math.random()*6);
+				System.out.println(&quot;\tYou rolled a &quot;+roll+&quot;.&quot;);
+				if (roll == 1) {
+					System.out.println(&quot;\tThat ends your turn. &quot;);
+					turnTotal = 0;
+				}
+				else {
+					turnTotal += roll;
+					System.out.print(&quot;\tYou have &quot;+turnTotal);
+					System.out.print(&quot; points so far this round.\n&quot;);
+					System.out.print(&quot;\tWould you like to \&quot;roll\&quot; again&quot;);
+					System.out.print(&quot; or \&quot;hold\&quot;? &quot;);
+					choice = keyboard.next();
+				}
+			}while (roll != 1 &amp;&amp; choice.equals(&quot;roll&quot;));
+			
+			ptot += turnTotal;
+			System.out.println(&quot;\tYou end the round with &quot;+ptot+&quot; points.&quot;);
+			
+			if (ptot &lt; 100) {
+				turnTotal = 0;
+				System.out.println(&quot;Computer has &quot;+ctot+&quot; points.&quot;);
+
+				do {
+					roll = 1 + (int)(Math.random()*6);
+					System.out.println(&quot;\tComputer rolled a &quot;+roll+&quot;.&quot;);
+					if (roll == 1) {
+						System.out.println(&quot;\tThat ends its turn. &quot;);
+						turnTotal = 0;
+					}
+					else {
+						turnTotal += roll;
+						System.out.print(&quot;\tComputer has &quot;+turnTotal);
+						System.out.print(&quot; points so far this round.\n&quot;);
+						if (turnTotal &lt; 20) {
+							System.out.println(&quot;\tComputer will roll again.&quot;);
+						}
+					}
+			} while (roll != 1 &amp;&amp; (turnTotal &lt; 20 &amp;&amp; ctot + turnTotal &lt;= 100));
+			
+			ctot += turnTotal;
+			System.out.print(&quot;\tComputer ends the round with &quot;);
+			System.out.print(ctot+&quot; points.\n&quot;);		
+		}
+
+	} while (ptot &lt; 100 &amp;&amp; ctot &lt; 100);
+
+	if (ptot &gt; ctot) {
+		System.out.println(&quot;Humanity wins!!&quot;);
+	}
+	else {
+		System.out.println(&quot;The computer wins.&quot;);
+		}
+	}
+}</pre></code>
 		</div>
 
 		<br class="clear" />
