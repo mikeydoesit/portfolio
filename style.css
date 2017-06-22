@@ -106,6 +106,32 @@ h4 {
 
 .skillicon {
 	max-width: 100%;
+	margin: 30px;
+}
+
+.contact-me {
+	height: 350px;
+	background-image: url('bg4.jpg'); 
+  -webkit-background-repeat: repeat;
+  -moz-background-repeat: repeat;
+  -o-background-repeat: repeat;
+  background-repeat: repeat;
+  padding-top: 30px;
+}
+
+.contact-headline {
+	color: white;
+}
+
+.contact-info {
+	color: white;
+	font-size: 13px;
+	margin-top: 30px;
+}
+
+.contact-link {
+	color: white;
+	font-size: 13px;
 }
 
 p {
