@@ -8,7 +8,8 @@ body{
   -moz-background-repeat: repeat;
   -o-background-repeat: repeat;
   background-repeat: repeat;
-  height: 610px;
+  max-height: 100%;
+  padding-bottom: 60px;
 }
 
 h1 {
@@ -121,6 +122,7 @@ h4 {
 
 .contact-headline {
 	color: white;
+	margin-top: 40px;
 }
 
 .contact-info {
@@ -158,4 +160,29 @@ li {
 
 p {
 	text-align: center;
+}
+
+.soc-med {
+  color: white;
+  font-size: 15px;
+  margin-top: 1%;
+  text-decoration: none;
+}
+
+.social-media {
+	text-align: center;
+	margin-top: 50px;
+}
+
+#githubicon {
+  color: rgb(102,43,129);
+}
+#googleplusicon {
+  color: #d34836;
+}
+#linkedinicon {
+  color: rgb(0,127,178);
+}
+#facebookicon {
+  color: rgb(59,89,163);
 }

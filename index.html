@@ -1,7 +1,11 @@
 <html>
 	<head>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Kanit:400,400i,700,700i" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link
@@ -11,18 +15,23 @@
     media="screen"
   />
 
-  <script type="text/javascript" src="prism.js"></script>
+  	<script type="text/javascript" src="prism.js"></script>
 	
+	<title>Michael Obeng</title>
+	<meta name="description" content="Michael Obeng is a professional
+        front-end web developer specializing in algorithm design.
+        He has extensive experience with Java, JavaScript,
+        and building web applications.">
 	</head>
 
 	<body>
 		<div class="about-container">
 		<ul>
-			<li><a href="#" class="nav-link">About</a></li>
-			<li><a href="#code-samples" class="nav-link">Code Samples</a></li>
-			<li><a href="#web-apps" class="nav-link">Web Apps</a></li>
-			<li><a href="#skills-and-tools" class="nav-link">Skills &amp; Tools</a></li>
-			<li class="hire-me"><a href="#hire-me" class="nav-link">Hire Me</a></li>
+			<li><a href="#" class="nav-link">ABOUT</a></li>
+			<li><a href="#code-samples" class="nav-link">CODE SAMPLES</a></li>
+			<li><a href="#web-apps" class="nav-link">WEB APPS</a></li>
+			<li><a href="#skills-and-tools" class="nav-link">SKILLS &amp; TOOLS</a></li>
+			<li class="hire-me"><a href="#hire-me" class="nav-link">HIRE ME</a></li>
 		</ul>
 			<div class="about">
 				<img src="me.jpg" class="me" />
@@ -31,7 +40,7 @@
 				<h2>WEB DEVELOPER</h2>
 				<hr class="grey"/>
 					<p class="bio">
-						A freelance Web Developer based in London.  My primary focus is in algorithm design using front-end technologies such as Javascript and Ruby.  My current goal is to find an open source project I can make a meaningful contribution to.
+						A freelance Web Developer based in London.  My primary focus is in algorithm design using front-end technologies such as Javascript and Ruby.  My current goal is to find an open source project or software company I can make a meaningful contribution to.
 					</p>
 			</div>
 		</div>
@@ -39,20 +48,32 @@
 		<hr class="red">
 
 		<div class="box">
-			<h4>Temperature Conversion</h4>
+			<h4>Caesars Cipher</h4>
 			<p>
-				This Ruby program will prompt the user for a temperature in degree Celsius and let the user knnow what the corresponding temperature is in Fahrenheit.
+				One of the simplest and most widely known ciphers is a Caesar cipher.  In a Caesar cipher the meanings of the letters are shifted by some set amount.  A common modern use is the ROT13 cipher, where the values of the letters are shifted by 13 places.  This Javascript function takes a ROT13 encoded string as input and returns a decoded string.
 			</p>
 		</div>
 
 		<div class="box">
-			<pre><code class="language-ruby">def celsius_to_fahrenheit(celsius)
-  return celsius * 9/5 + 32
-end
+			<pre><code class="language-javascript">function rot13(str) { 
+  
+  var newArray = [];
+  
+  for (var i = 0; i &lt; str.length; i++) {
+    if (str.charCodeAt(i) &lt; 65 || str.charCodeAt(i) &gt; 90) {
+      newArray.push(str.charAt(i));
+    } else if (str.charCodeAt(i) &gt; 77) {
+      newArray.push(String.fromCharCode(str.charCodeAt(i) - 13));
+    } else {
+      newArray.push(String.fromCharCode(str.charCodeAt(i) + 13));
+    }    
+  }  
+  return newArray.join(&quot;&quot;);
+}
 
-puts &quot;Please enter degrees in Celsius: &quot;
-fahrenheit = celsius_to_fahrenheit(gets.to_f)
-puts &quot;The temperature is #{fahrenheit} degrees Fahrenheit&quot;</pre></code>
+
+rot13(&quot;UVER ZR!&quot;);
+</pre></code>
 		</div>
 
 		<br class="clear" />
@@ -200,7 +221,7 @@ public class PigDice {
 		<h3 id="skills-and-tools">Skills &amp; Tools</h3>
 		<hr class="red">
 		<p class="skills-and-tools">
-			Michael has developed proficiency and expertise in the following programming languages and comfort with the following tools.
+			I have developed proficiency and expertise in the following programming languages and comfort with the following tools.
 		</p>
 		<div class="icons">
 		<img src="github.png" class="icon"  />
@@ -225,6 +246,15 @@ public class PigDice {
           		michaelldninc@gmail.com
         		</a>
       		</p>
+      		<div class="social-media">
+      		<a class="soc-med" target="blank" href="https://plus.google.com/u/0/112946584288144988792"><i class="fa fa-google-plus-official" aria-hidden="true" id="googleplusicon"></i> Google+</a>
+
+        <a class="soc-med"  target="blank" href="https://github.com/mikeydoesit"><i class="fa fa-github-square" id="githubicon"></i> GitHub</a>
+
+        <a class="soc-med" target="blank" href="https://www.linkedin.com/in/michael-obeng-61586055/"><i class="fa fa-linkedin-square" aria-hidden="true" id="linkedinicon"></i> LinkedIn</a>
+
+        <a class="soc-med" target="blank" href="https://www.facebook.com/michael.obeng.7549"><i class="fa fa-facebook-square" aria-hidden="true" id="facebookicon"></i> Facebook</a>
+        </div>
 		</div>
 
 	</body>
